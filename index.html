@@ -42,9 +42,13 @@
 
         @media (max-width: 768px) {
             #header {
-                height: 50vh;
-                /* background:  url("./assets/images/header-books.png");
-                grid-template-columns: repeat(1, 1fr);
+                /* background:  url("./assets/images/header-mobile.png");
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 50vh; */
+
+                /*grid-template-columns: repeat(1, 1fr);
                 grid-template-rows: repeat(4, 1fr);  */
             }
         }
@@ -139,21 +143,34 @@
                 <a class="nav-link disabled" href="#">Disabled</a>
             </li> -->
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <!-- <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            </form> -->
         </div>
     </nav>
     <!-- Header -->
     <section id="header">
+        <div class="min-vh-100 d-lg-none carousel slide" data-ride="carousel">
+            <div class="carousel-inner min-vh-100">
+                <div class="carousel-item active">
+                    <img src="./assets/images/header-1.png" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/header-2.png" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/header-3.png" alt="...">
+                </div>
+            </div>
+        </div>
     </section>
     <!-- People -->
     <section id="people">
         <div class="container py-5 people-grid">
             <div class="card m-2">
                 <div class="card-body person-grid">
-                    <img class="img-fluid" src="./assets/images/fang-yi-fan.png" alt="Card image cap">
+                    <img class="img-fluid" src="./assets/images/people/fang-yi-fan.png" alt="Card image cap">
                     <aside class="my-2">
                         <h5 class="card-title">方一反</h5>
                         <p class="card-text"></p>
@@ -162,7 +179,7 @@
             </div>
             <div class="card m-2">
                 <div class="card-body person-grid">
-                    <img class="img-fluid" src="./assets/images/tong-wen-jie.png" alt="Card image cap">
+                    <img class="img-fluid" src="./assets/images/people/tong-wen-jie.png" alt="Card image cap">
                     <aside class="my-2">
                         <h5 class="card-title">童文洁</h5>
                         <p class="card-text"></p>
@@ -171,7 +188,7 @@
             </div>
             <div class="card m-2">
                 <div class="card-body person-grid">
-                    <img class="img-fluid" src="./assets/images/fang-yuan.png" alt="Card image cap">
+                    <img class="img-fluid" src="./assets/images/people/fang-yuan.png" alt="Card image cap">
                     <aside class="my-2">
                         <h5 class="card-title">方圆</h5>
                         <p class="card-text"></p>
@@ -180,7 +197,7 @@
             </div>
             <div class="card m-2">
                 <div class="card-body person-grid">
-                    <img class="img-fluid" src="./assets/images/lin-lei-er.png" alt="Card image cap">
+                    <img class="img-fluid" src="./assets/images/people/lin-lei-er.png" alt="Card image cap">
                     <aside class="my-2">
                         <h5 class="card-title">林磊儿</h5>
                         <p class="card-text"></p>
@@ -190,7 +207,7 @@
 
             <div class="card m-2">
                 <div class="card-body person-grid">
-                    <img class="img-fluid" src="./assets/images/ji-yang-yang.png" alt="Card image cap">
+                    <img class="img-fluid" src="./assets/images/people/ji-yang-yang.png" alt="Card image cap">
                     <aside class="my-2">
                         <h5 class="card-title">季杨杨</h5>
                         <p class="card-text"></p>
@@ -199,7 +216,7 @@
             </div>
             <div class="card m-2">
                 <div class="card-body person-grid">
-                    <img class="img-fluid" src="./assets/images/liu-jing.png" alt="Card image cap">
+                    <img class="img-fluid" src="./assets/images/people/liu-jing.png" alt="Card image cap">
                     <aside class="my-2">
                         <h5 class="card-title">刘静</h5>
                         <p class="card-text"></p>
@@ -208,7 +225,7 @@
             </div>
             <div class="card m-2">
                 <div class="card-body person-grid">
-                    <img class="img-fluid" src="./assets/images/ji-sheng-li.png" alt="Card image cap">
+                    <img class="img-fluid" src="./assets/images/people/ji-sheng-li.png" alt="Card image cap">
                     <aside class="my-2">
                         <h5 class="card-title">季胜利</h5>
                         <p class="card-text"></p>
@@ -217,7 +234,7 @@
             </div>
             <div class="card m-2">
                 <div class="card-body person-grid">
-                    <img class="img-fluid" src="./assets/images/ji-jiu-jiu.png" alt="Card image cap">
+                    <img class="img-fluid" src="./assets/images/people/ji-jiu-jiu.png" alt="Card image cap">
                     <aside class="my-2">
                         <h5 class="card-title">季舅舅</h5>
                         <p class="card-text"></p>
@@ -227,7 +244,7 @@
 
             <div class="card m-2">
                 <div class="card-body person-grid">
-                    <img class="img-fluid" src="./assets/images/qiao-ying-zi.png" alt="Card image cap">
+                    <img class="img-fluid" src="./assets/images/people/qiao-ying-zi.png" alt="Card image cap">
                     <aside class="my-2">
                         <h5 class="card-title">乔英子</h5>
                         <p class="card-text"></p>
@@ -236,7 +253,7 @@
             </div>
             <div class="card m-2">
                 <div class="card-body person-grid">
-                    <img class="img-fluid" src="./assets/images/song-qian.png" alt="Card image cap">
+                    <img class="img-fluid" src="./assets/images/people/song-qian.png" alt="Card image cap">
                     <aside class="my-2">
                         <h5 class="card-title">宋倩</h5>
                         <p class="card-text"></p>
@@ -245,7 +262,7 @@
             </div>
             <div class="card m-2">
                 <div class="card-body person-grid">
-                    <img class="img-fluid" src="./assets/images/qiao-wei-dong.png" alt="Card image cap">
+                    <img class="img-fluid" src="./assets/images/people/qiao-wei-dong.png" alt="Card image cap">
                     <aside class="my-2">
                         <h5 class="card-title">乔卫东</h5>
                         <p class="card-text"></p>
@@ -255,7 +272,7 @@
 
             <div class="card m-2">
                 <div class="card-body person-grid">
-                    <img class="img-fluid" src="./assets/images/li-lao-shi.png" alt="Card image cap">
+                    <img class="img-fluid" src="./assets/images/people/li-lao-shi.png" alt="Card image cap">
                     <aside class="my-2">
                         <h5 class="card-title">李老师</h5>
                         <p class="card-text"></p>
@@ -267,53 +284,98 @@
     <!-- Episodes -->
     <section id="episodes">
         <div class="container">
-        <div id="accordion align-middle">
-            <!-- Episode 1 -->
-            <div class="card text-center">
-              <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    第一集
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            <div id="accordion align-middle">
+                <!-- Episode 1 -->
+                <div class="card text-center">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#episode1" aria-expanded="true" aria-controls="episode1">
+                                第一集
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="episode1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            马上来。。。
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <!-- Episode 2 -->
-            <div class="card text-center">
-              <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    第二集                  
-                    </button>
-                </h5>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <!-- Episode 2 -->
+                <div class="card text-center">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#episode2" aria-expanded="true" aria-controls="episode2">
+                                第二集
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="episode2" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            马上来。。。
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <!-- Episode 3 -->
-            <div class="card text-center">
-              <div class="card-header" id="headingThree">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    第三集
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <!-- Episode 3 -->
+                <div class="card text-center">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#episode3" aria-expanded="true" aria-controls="episode3">
+                                第三集
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="episode3" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            马上来。。。
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <!-- Episode 4 -->
+                <div class="card text-center">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#episode4" aria-expanded="true" aria-controls="episode4">
+                                第四集
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="episode4" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            马上来。。。
+                        </div>
+                    </div>
+                </div>
+                <!-- Episode 5 -->
+                <div class="card text-center">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#episode5" aria-expanded="true" aria-controls="episode5">
+                                第五集
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="episode5" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            马上来。。。
+                        </div>
+                    </div>
+                </div>
+                <!-- Episode 6 -->
+                <div class="card text-center">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#episode6" aria-expanded="true" aria-controls="episode6">
+                                第六集
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="episode6" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            马上来。。。
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
     </section>
 
@@ -324,6 +386,10 @@
     
     <script type="text/javascript">
 		$(document).ready(function() {
+            $('.carousel').carousel({
+                interval: 1500
+            });
+
             $('a[href^="#"]').on('click',function (e) {
                 e.preventDefault();
                 var target = this.hash,
