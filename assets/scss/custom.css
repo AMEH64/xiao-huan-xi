@@ -5088,6 +5088,7 @@ input[type="button"].btn-block {
           flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
+  color: #1c424d;
 }
 
 .card-title {
