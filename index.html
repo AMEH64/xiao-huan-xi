@@ -4,52 +4,33 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="author" content="Allen Hansen">
-    <meta name="keywords" content="full stack developer,html,html5,css,css3,asp.net,model view controller,mvc,javascript,jquery,c,c++,c#,.net,bootstrap,allen hansen">
+    <meta name="keywords" content="小欢喜,xiao huan xi,bootstrap,allen hansen,ameh">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="assets/scss/custom.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
-        /* Global */
-        :root {
-            --primary-color: #1c424d;
-            --secondary-color: #c8c9c4;
+        body {
+            font-family: 'Long Cang', cursive;
+        }
+        
+        .btn-primary i.animated,
+        .btn-secondary i.animated,
+        .btn-outline-primary i.animated,
+        .btn-outline-secondary i.animated {
+            -webkit-transition-property: -webkit-transform;
+            -webkit-transition-duration: 1s;
+            -moz-transition-property: -moz-transform;
+            -moz-transition-duration: 1s;
         }
 
-        .bg-primary {
-            background-color: var(--primary-color) !important;
-        }
-
-        .btn-outline-primary {
-            color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-
-        .btn-outline-secondary {
-            color: var(--secondary-color);
-            border-color: var(--secondary-color);
-        }
-
-            .btn-outline-secondary:hover,
-            .btn-outline-secondary:focus {
-                    outline: 0;
-                    color: var(--primary-color);
-                    border: 2px solid var(--secondary-color);
-                    background: var(--secondary-color);
-            }
-
-            .btn-outline-primary i.animated,
-            .btn-outline-secondary i.animated {
-                -webkit-transition-property: -webkit-transform;
-                -webkit-transition-duration: 1s;
-                -moz-transition-property: -moz-transform;
-                -moz-transition-duration: 1s;
-            }
-
+            .btn-primary i.animated,
+            .btn-secondary i.animated,
             .btn-outline-primary:hover i.animated,
             .btn-outline-secondary:hover i.animated {
                 -webkit-animation-name: pulse;
@@ -95,16 +76,7 @@
                     transform: scale(1);
                 }
             }
-
-        body {
-            font-family: 'Long Cang', cursive;
-        }
-
-        .seperator {
-            background-color: var(--primary-color);
-            border: solid var(--secondary-color) 1px;
-        }
-
+            
         /* Header */
         #header {
             background: url("assets/images/header.png");
@@ -114,10 +86,6 @@
         }
 
         /* People */
-        #people {
-            background-color: var(--secondary-color);
-        }
-
         .people-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -153,14 +121,9 @@
             }
         
         /* Episodes */
-        #episodes {
-            background-color: var(--primary-color);
-        }
 
         /* Footer */
         footer {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(1, 1fr); 
@@ -231,22 +194,11 @@
         </div>
     </nav>
     <!-- Toasts -->
-    <!-- <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header bg-primary">
-            <img src="assets/images/logo.png" class="mr-2" alt="...">
-            <small class="text-muted">3/29/2020</small>
-            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="toast-body">
-            This site is still under development!
-        </div>
-    </div> -->
-    <!-- <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
-        <div class="toast" style="position: absolute; top: 0; right: 0;">
+    <!-- <div class="position-absolute w-100 d-flex flex-column p-4"> -->
+    <!-- <div aria-live="assertive m-5" aria-atomic="true" style="position: relative; min-height: 200px;"> 
+        <div class="toast m-5" role="alert" aria-live="assertive" aria-atomic="true" data-delay="1500" data-autohide="false" style="position: absolute; top: 0; right: 0">
             <div class="toast-header bg-primary">
-                <img src="assets/images/logo.png" class="mr-2" alt="...">
+                <img src="" class="mr-2" alt="...">
                 <small class="text-muted">3/29/2020</small>
                 <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -281,15 +233,41 @@
         </div>
     </section>
     <!-- Trailer -->
-    <!-- <section id="trailer">
-        <div class="container">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/XOldvSjfKpw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+    <section id="trailer">
+        <div class="jumbotron jumbotron-fluid mb-0 bg-secondary text-primary text-center">
+            <div class="container">
+                <h1 class="display-4">小欢喜的预告</h1>
+                <p class="lead"></p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    预告
+                </button>
             </div>
         </div>
-    </section> -->
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="trailerModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="trailerModalTitle">预告</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/XOldvSjfKpw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
     <!-- People -->
-    <section id="people">
+    <section id="people" class="bg-primary text-secondary">
         <div class="container py-5 people-grid"> 
             <div class="card m-2">
                 <div class="card-body person-grid">
@@ -399,10 +377,10 @@
                     </aside>
                 </div>
             </div>
-        <!-- </div> -->
+        </div>
     </section>
     <!-- Episodes -->
-    <section id="episodes" class="vh-100">
+    <section id="episodes" class="bg-secondary text-primary">
         <div class="container py-5">
             <div id="accordion">
                 <div class="card">
@@ -450,9 +428,8 @@
             </div>
         </div>
     </section>
-    <div class="seperator"></div>
     <!-- Footer -->
-    <footer>
+    <footer class="bg-primary text-secondary">
         <aside class="social-icons py-3 mx-auto">            
             <ul class="">
                 <a href="https://www.facebook.com/ameh64" class="btn btn-outline-secondary rounded-circle">
@@ -474,10 +451,9 @@
         </aside>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="assets/bootstrap-4.4.1/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             // Add scrollspy to <body>
@@ -505,9 +481,9 @@
                 interval: 1500
             });
             // Toasts
-            $(document).ready(function(){
-                $('.toast').toast('show');
-            });
+            // $(document).ready(function(){
+            //     $('.toast').toast('show');
+            // });
         });
     </script>
   </body>
