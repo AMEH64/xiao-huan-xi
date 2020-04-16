@@ -6,176 +6,20 @@
     <meta name="author" content="Allen Hansen">
     <meta name="keywords" content="小欢喜,xiao huan xi,bootstrap,allen hansen,ameh">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <!-- Bootstrap Custom CSS -->
+    <link rel="stylesheet" href="assets/scss/bootstrap-custom.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/scss/custom.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Roboto&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <style>
-        body {
-            font-family: 'Long Cang', cursive;
-        }
-        
-        .btn-primary i.animated,
-        .btn-secondary i.animated,
-        .btn-outline-primary i.animated,
-        .btn-outline-secondary i.animated {
-            -webkit-transition-property: -webkit-transform;
-            -webkit-transition-duration: 1s;
-            -moz-transition-property: -moz-transform;
-            -moz-transition-duration: 1s;
-        }
-
-            .btn-primary i.animated,
-            .btn-secondary i.animated,
-            .btn-outline-primary:hover i.animated,
-            .btn-outline-secondary:hover i.animated {
-                -webkit-animation-name: pulse;
-                -moz-animation-name: pulse;
-                -webkit-animation-duration: 1.5s;
-                -moz-animation-duration: 1.5s;
-                -webkit-animation-iteration-count: infinite;
-                -moz-animation-iteration-count: infinite;
-                -webkit-animation-timing-function: linear;
-                -moz-animation-timing-function: linear;
-            }
-
-            @-webkit-keyframes pulse {    
-                0% {
-                    -webkit-transform: scale(1);
-                    transform: scale(1);
-                }
-
-                50% {
-                    -webkit-transform: scale(1.2);
-                    transform: scale(1.2);
-                }
-
-                100% {
-                    -webkit-transform: scale(1);
-                    transform: scale(1);
-                }
-            }
-
-            @keyframes pulse {    
-                0% {
-                    -moz-transform: scale(1);
-                    transform: scale(1);
-                }
-
-                50% {
-                    -moz-transform: scale(1.2);
-                    transform: scale(1.2);
-                }
-
-                100% {
-                    -moz-transform: scale(1);
-                    transform: scale(1);
-                }
-            }
-            
-        /* Header */
-        #header {
-            background: url("assets/images/header.png");
-            background-position: center bottom;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        /* People */
-        .people-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-        }
-
-            @media (max-width: 768px) {
-                .people-grid {
-                    grid-template-columns: repeat(1, 1fr);
-                    grid-template-rows: repeat(12, 1fr);
-                    grid-gap: 10px;  
-                }
-                        
-                .person-grid {
-                    display: grid;
-                    grid-gap: 15px;
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-template-rows: repeat(1, 1fr); 
-                }
-            }
-
-            @media (max-width: 576px) {
-                .people-grid {
-                    grid-template-columns: repeat(1, 1fr);
-                    grid-template-rows: repeat(12, 1fr); 
-                }
-                            
-                .person-grid {
-                    display: grid;
-                    grid-template-columns: repeat(1, 1fr);
-                    grid-template-rows: repeat(2, auto); 
-                }
-            }
-        
-        /* Episodes */
-
-        /* Footer */
-        footer {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(1, 1fr); 
-        }
-
-        .social-icons {
-            grid-column: 1 / 2;
-        }
-
-        .copyright {
-            grid-column: 2 / 2;           
-        }
-
-            @media (max-width: 768px) {
-                footer {
-                    grid-template-columns: repeat(1, 1fr);
-                    grid-template-rows: repeat(2, 1fr); 
-                }
-
-                .social-icons {
-                    grid-column: 1 / 1;
-                    grid-row: 1 / 2;
-                }
-
-                .copyright {
-                    grid-column: 1 / 1;
-                    grid-row: 2 / 2;           
-                }
-            }
-
-            @media (max-width: 576px) {
-                footer {
-                    grid-template-columns: repeat(1, 1fr);
-                    grid-template-rows: repeat(2, 1fr); 
-                }
-
-                .social-icons {
-                    grid-column: 1 / 1;
-                    grid-row: 1 / 2;
-                }
-
-                .copyright {
-                    grid-column: 1 / 1;
-                    grid-row: 2 / 2;           
-                }
-            }
-    </style>
     <title>小欢喜</title>
   </head>
   <body>
     <!-- Navbar -->
-    <nav id="myNavBar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+    <nav id="myNavBar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-gradient-primary">
         <a class="navbar-brand" href="#header">
             <img src="assets/images/logo.png" width="auto" height="30" alt="小欢喜">
         </a>
@@ -197,14 +41,13 @@
     <!-- <div class="position-absolute w-100 d-flex flex-column p-4"> -->
     <!-- <div aria-live="assertive m-5" aria-atomic="true" style="position: relative; min-height: 200px;"> 
         <div class="toast m-5" role="alert" aria-live="assertive" aria-atomic="true" data-delay="1500" data-autohide="false" style="position: absolute; top: 0; right: 0">
-            <div class="toast-header bg-primary">
-                <img src="" class="mr-2" alt="...">
+            <div class="toast-header bg-danger">
                 <small class="text-muted">3/29/2020</small>
                 <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="toast-body">
+            <div class="toast-body bg-danger">
                 This site is still under development!
             </div>
         </div>
@@ -234,13 +77,13 @@
     </section>
     <!-- Trailer -->
     <section id="trailer">
-        <div class="jumbotron jumbotron-fluid mb-0 bg-secondary text-primary text-center">
+        <div class="jumbotron jumbotron-fluid mb-0 bg-gradient-secondary text-primary text-center">
             <div class="container">
                 <h1 class="display-4">小欢喜的预告</h1>
                 <p class="lead"></p>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                    预告
+                    按下观看
                 </button>
             </div>
         </div>
@@ -267,7 +110,8 @@
         </div>
     </div>
     <!-- People -->
-    <section id="people" class="bg-primary text-secondary">
+    <section id="people" class="bg-gradient-primary text-secondary">
+        <!-- <h1>演员表</h1> -->
         <div class="container py-5 people-grid"> 
             <div class="card m-2">
                 <div class="card-body person-grid">
@@ -380,56 +224,271 @@
         </div>
     </section>
     <!-- Episodes -->
-    <section id="episodes" class="bg-secondary text-primary">
-        <div class="container py-5">
-            <div id="accordion">
-                <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                第一集
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card-body">
-                            马上来。。。
-                        </div>
-                    </div>
+    <section id="episodes" class="container-fluid bg-gradient-secondary text-primary py-5">
+        <div class="container">
+            <h1 class="text-center">第一集</h1>
+            <div class="row">
+                <div class="col-md-7 order-md-2">
+                    <p class="lead">。。。</p>
+                    <p class="lead">。。。</p>
+                    <p class="lead">。。。</p>
                 </div>
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                第二集
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                        <div class="card-body">
-                            马上来。。。
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingThree">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                第三集
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                        <div class="card-body">
-                            马上来。。。
-                        </div>
-                    </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="img-fluid mx-auto" src="" alt="">
                 </div>
             </div>
+
+            <hr />
+
+            <h1 class="text-center">第二集</h1>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">。。。</p>
+                    <p class="lead">。。。</p>
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+
+            <hr />
+
+            <h1 class="text-center">第三集</h1>
+            <div class="row">
+                <div class="col-md-7 order-md-2">
+                    <p class="lead">。。。</p>
+                    <p class="lead">。。。</p>
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+
+            <hr />
+
+            <h1 class="text-center">第四集</h1>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">。。。</p>
+                    <p class="lead">。。。</p>
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+
+            <hr />
+            <h1 class="text-center">第五集</h1>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">上一集童文洁去了福建把林磊儿接来北京跟方一反上学。他在北京的第一天，方圆，童文洁，方一反，和方圆的父母都欢饮他来到北京，他们在一家房管儿吃晚饭。方圆的父母觉得林磊儿会影响方一反的学习能力。方圆的爸问方一反他要不要跟他们住在一起，这件事儿让林磊儿不好意思。他们回了家给林磊儿看看他的新家。童文洁怕林磊儿还不舒服，所以她让方一反帮她不但在家里照顾林磊儿，而且在学校照顾他。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7 order-md-2">
+                    <p class="lead">上一集宋倩跟乔英子吵架了。她们都觉得是她们自己们的错。乔英子很早起床给她妈做早饭。宋倩没想到乔英子起了床。</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">季胜利高高兴兴地回来，刘静也做了晚饭。等着杨杨回来团员。没想到杨杨去舅舅车场开卡丁车。刘静一直杨杨打电话，但是他把他的手机放在车场的桌子上。开完卡丁车以后，。。。杨杨回了家，跟他爸吵架，然后他们的关系变得不好。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+
+            <hr />
+
+            <h1 class="text-center">第六集</h1>
+            <div class="row">
+                <div class="col-md-7 order-md-2">
+                    <p class="lead">。。。</p>
+                    <p class="lead">。。。</p>
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+
+            <hr />
+
+            <h1 class="text-center">第七集</h1>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">第七集发生在分班考试的第二天。</p>
+                    <p class="lead">
+                        学生考完后，考试成绩<span class="font-weight-bold" tabindex="0" data-toggle="tooltip" data-html="true" data-placement="top" title="<img class='img-fluid' src='assets/images/episodes/7/放榜.png' alt='放榜'>">放榜</span>了。
+                        乔英子被林磊儿<span class="font-weight-bold" tabindex="0" data-toggle="tooltip" data-html="false" data-placement="top" title="乔英子输了。">打败</span>了，林磊儿考了全年级第一，乔英子考了全年级第二。
+                        方一反发现了一个让人尴尬的事情，他考了全年级<span class="font-weight-bold" tabindex="0" data-toggle="tooltip" data-html="false" data-placement="top" title="从末开始，比如工作周倒数第一天是周五。">倒数</span>第一。
+                    </p>
+                    <p class="lead">
+                        英子马上要过生日了，所以方一反送给她一个礼物，就是
+                        <span class="font-weight-bold" tabindex="0" data-toggle="tooltip" data-html="true" data-placement="top" title="<img class='img-fluid' src='assets/images/episodes/7/星球大战.png' alt='Star Wars'>">星球大战</span>
+                        的
+                        <span class="font-weight-bold" tabindex="0" data-toggle="tooltip" data-html="true" data-placement="top" title="<img class='img-fluid' src='assets/images/episodes/7/乐高.png' alt='Lego'>">乐高</span>
+                        ，但是她怕宋倩会没收它，所以方一反帮她把乐高从包装拿出来藏在她的书包。后来英子回了家，宋倩找到，没收了她的乐高。
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="assets/images/episodes/7/分班考试成绩放榜了.png" alt="分班考试成绩放榜了">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7 order-md-2">
+                    <p class="lead">
+                        晚上，乔卫东为了庆祝女儿考上冲刺班带她吃火锅。因为英子马上要过生日了。他们吃火锅时。宋倩一直给英子发个短信告诉她快吃一点儿，然后回家继续学习。
+                    </p>
+                    <p class="lead">
+                        与此同时，童文洁和方圆在家发现了他们儿子分班考试的成绩。童文洁生他的气，所以方圆试试改善他们两个人的关系，不过童文洁还生气，所以她藏方一反的玩具。
+                    </p>
+                    <p class="lead">
+                        英子怕宋倩再藏她的乐高，所以英子请方一反帮她藏乐高在他的家。方一反怕他跟林磊儿把这么大的乐高回家，童文洁会说什么，
+                    </p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="img-fluid mx-auto" src="assets/images/episodes/7/乐哥.png" alt="乐哥">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">
+                        但是他们两个人互相配合。为了让童文洁和方圆看不到方一反把乐高回家，林磊儿假装生病。童文洁没想到她把方一反的玩具都没收了，但是他反应都没有。方一反告诉他的父母就是因为他了解他们目的，让他好好儿学习。
+                    </p>
+                    <p class="lead">
+                        英子回了家，宋倩宋倩其实挺开心的，因为她考上冲刺班。她高高兴兴的给英子一个礼物来庆祝影子的生日。好像看起来她们两个人的关系改善了。
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="assets/images/episodes/7/英子和宋倩.png" alt="">
+                </div>
+            </div>
+
+            <!-- <hr />
+
+            <h1 class="text-center">第八集</h1>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7 order-md-2">
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+
+            <hr />
+
+            <h1 class="text-center">第九集</h1>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7 order-md-2">
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+
+            <hr />
+
+            <h1 class="text-center">第十集</h1>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7 order-md-2">
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+
+            <hr />
+
+            <h1 class="text-center">第十一集</h1>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7 order-md-2">
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead">。。。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid mx-auto" src="" alt="">
+                </div>
+            </div> -->
         </div>
     </section>
     <!-- Footer -->
-    <footer class="bg-primary text-secondary">
+    <footer class="bg-gradient-primary text-secondary">
         <aside class="social-icons py-3 mx-auto">            
             <ul class="">
                 <a href="https://www.facebook.com/ameh64" class="btn btn-outline-secondary rounded-circle">
@@ -474,6 +533,8 @@
                         // Add hash (#) to URL when done scrolling (default click behavior)
                         window.location.hash = hash;
                     });
+                    $("#myNavBar").find(".active").removeClass("active");
+                    $(this).addClass("active");
                 }  // End if
             });
             // Carousel settings
@@ -481,9 +542,12 @@
                 interval: 1500
             });
             // Toasts
-            // $(document).ready(function(){
-            //     $('.toast').toast('show');
-            // });
+            // $('.toast').toast('show');
+
+            // Tooltips
+            $("body").tooltip({ 
+                selector: '[data-toggle=tooltip]' 
+            });
         });
     </script>
   </body>
